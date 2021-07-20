@@ -13,7 +13,7 @@ app.use(express.static(__dirname));
 // app.use(favicon(__dirname + "/images/favicon/favicon.ico"));
 app.use(bodyParser.urlencoded( {extended:true} ));
 
-app.listen(process.env.port || 3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running");
 });
 
