@@ -2,15 +2,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 // external module required for favicon.ico
-const favicon = require('serve-favicon')
-const path = require('path')
+// const favicon = require('serve-favicon')
+const path = require('path');
 
 const app = express();
 
 // for some reason this allows the use of CSS
 app.use(express.static(__dirname));
 // takes the favicon from the directory
-app.use(favicon(__dirname + "/images/favicon/favicon.ico"));
+// app.use(favicon(__dirname + "/images/favicon/favicon.ico"));
 app.use(bodyParser.urlencoded( {extended:true} ));
 
 app.listen(process.env.PORT || 3000, function() {
